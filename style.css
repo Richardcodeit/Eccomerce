@@ -1,0 +1,305 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+h1 , h2 , h3 , div{
+  font-size: 20px;
+}
+p{
+  font-size: 12px;
+}
+img {
+  cursor: pointer;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header > div {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+.menu-icon {
+  display: noe;
+}
+.sideBar {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 100vh;
+    left: -300%;
+    z-index: 1;
+    padding: 20px 40px;
+    padding-left: 20px;
+    margin-top: -30px;
+    transition: .5s ease-in-out;
+}
+.sideBar ul{
+  margin-top: 30px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.sideBar ul li {
+  font-size: 16px;
+  font-weight: 900;
+}
+.name {
+  margin-top: -7px;
+}
+.cart-icon {
+  position: relative;
+ }
+ .cart-icon p {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  padding: 5px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border-radius: 50%;
+ }
+.avatar {
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+}
+.shoes-image {
+  width: 100%;
+}
+.cart-box {
+  position: absolute;
+  width: 90%;
+  height: fit-content;
+  margin: 10px auto;
+  z-index: 1;
+  left: -100%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  overflow-y: scroll;
+  /* top: -50%; */
+  transition: .7s linear;
+}
+.cart-box .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px -15px;
+  padding: 0px 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.cart-box ul{
+  list-style-type: none;
+  padding-top: 20px;
+}
+.cart-box ul li > div:first-child{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px auto;
+  color: hsl(219, 9%, 45%);
+}
+.cart-box .name-and-price .price {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-box .name-and-price .total-price {
+  color: black;
+  font-weight: 800;
+}
+.cart-box .cart-thumbnail {
+  width: 50px;
+}
+.container , .lightroom-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.container .cards , .lightroom-container .lightroom-cards{
+  width: 100%;
+  display: flex;
+  transition: .5s ease-in-out;
+}
+.container .cards .card , .lightroom-container .lightroom-cards .lightroom-card{
+  width: 100%;
+  object-fit: cover;
+  flex: 0 0 100%;
+}
+.container .cards .card img , .lightroom-container .lightroom-cards .lightroom-card img{
+  width: 100%;
+  height: 100%;
+}
+.control , .lightroom-control{ 
+ position: absolute;
+ width: 50px;
+ background-color: rgb(236, 236, 233);
+ text-align: center;
+ padding: 10px;
+ border-radius: 50%;
+}
+.icon-previous , .lightroom-icon-previous{
+  top: 50%;
+  left: 5px;
+}
+.icon-next , .lightroom-icon-next {
+  top: 50%;
+  right: 5px;
+}
+.thumbnails {
+ display: none;
+}
+.description-section{
+  width: 100%;
+  padding: 20px;
+}
+.description-section .description .name {
+  font-size: 12px;
+  color:  hsl(26, 100%, 55%);
+  padding-bottom: 10px;
+}
+.description h1{
+  padding-bottom: 7px;
+}
+.description .about{
+  color: hsl(219, 9%, 45%);
+  padding-bottom: 15px;
+}
+.addCart {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.addCart  div:first-child{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.addCart  div:first-child p {
+  margin-top: -2px;
+  padding: 3px;
+  height: fit-content;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+}
+.addCart div:last-child p {
+  margin-top: 5px;
+  color: hsl(219, 9%, 45%);
+}
+.items-No {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color:  hsl(223, 64%, 98%);
+  border-radius: 10px;
+  margin: 20px auto;
+}
+.button {
+  width: 100%;
+}
+.button button {
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px hsl(26, 100%, 55%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.lightroom {
+  display: none;
+}
+@media screen and (min-width:1000px) {
+  main{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .thumbnail , .lightroom-thumbnail {
+    width: 100px;
+    /* flex: 0 0 20%; */
+  }
+  .thumbnail.active {
+    opacity: 30%;
+    border: 5px solid hsl(26, 100%, 55%);
+    border-radius: 6px;
+  }
+  .thumbnail img , .lightroom-thumbnail img{
+    width: 100%;
+    border-radius: 5px;
+  }
+  .thumbnails , .lightroom-thumbnails {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .shoes-image , .lightroom {
+    float: left;
+    width: 500px;
+  }
+  .shoes-image .container , .lightroom > .lightroom-container {
+    width: 700px;
+  }
+  .container .cards , .lightroom-container > .lightroom-cards{
+  width: 500px;
+}
+.container .cards .card img , .lightroom-container  .lightroom-cards  .lightroom-card img { 
+  border-radius: 20px;
+}
+.description-section .shoeName {
+  font-size: 30px;
+}
+.description-section .about , .description-section  .name {
+  font-size: 20px;
+}
+.description-section .addCart {
+  flex-direction: column;
+} 
+.description-section .button-and-increaseItems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.lightroom {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+  top: -200%;
+  transition: .5s ease-in-out ;
+}
+.lightroom::before{
+ position: absolute;
+ content: " ";
+ inset: 0;
+ background-color: black;
+ opacity: 50%;
+ z-index: -1;
+}
+}

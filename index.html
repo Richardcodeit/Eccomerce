@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body class="body">
+  <header>
+  <div>
+    <span class="menu-icon">
+      <img src="images/icon-menu.svg" alt="menu-icon" class="menu-icon">
+    </span>
+    <nav class="sideBar">
+      <span class="close-icon">
+           <img src="images/icon-close.svg" alt="close icon">
+      </span>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="name">
+      <h2>sneakers</h2>
+    </div>
+  </div>
+  <div>
+    <div class="cart-icon">
+      <p class="no-of-items">0</p>
+      <img src="images/icon-cart.svg" alt="cart-icon">
+    </div>
+    <div class="avatar">
+      <img src="images/image-avatar.png" alt="avatar">
+    </div>
+  </div>
+  </header>
+  <section class="cart-box">
+  <div class="head">
+    <p> Cart</p>
+    <span class="close-cart">
+      <img src="images/icon-close.svg" alt="">
+    </span>
+  </div> 
+    <ul class="ul-El"></ul>
+  </section>
+ <main> 
+<article>
+  <section class="shoes-images">
+    <div class="container">
+      <div class="cards">
+        <div class="card ">
+          <img src="images/image-product-1.jpg" alt="" class="shoeImage">
+        </div>
+        <div class="card">
+          <img src="images/image-product-2.jpg" alt="">
+        </div>
+        <div class="card">
+          <img src="images/image-product-3.jpg" alt="">
+        </div>
+        <div class="card">
+          <img src="images/image-product-4.jpg" alt="">
+        </div>
+      </div>
+     <div class="controls">
+      <div class="icon-previous control">
+        <img src="images/icon-previous.svg" alt="">
+      </div>
+      <div class="icon-next control">
+        <img src="images/icon-next.svg" alt="">
+      </div>
+     </div> 
+    </div>
+    <div class="thumbnails">
+      <div class="thumbnail one">
+        <img src="images/image-product-1-thumbnail.jpg" alt="">
+      </div>
+      <div class="thumbnail two">
+        <img src="images/image-product-2-thumbnail.jpg" alt="">
+      </div>
+      <div class="thumbnail three">
+        <img src="images/image-product-3-thumbnail.jpg" alt="">
+      </div>
+      <div class="thumbnail four">
+        <img src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+</article>
+<article>
+  <section class="description-section">
+  <div class="description">
+    <p class="name">
+     SNEAKER COMPANY
+    </p>
+    <h1 class="shoeName">
+      Fall Limited Edition Sneakers
+    </h1>
+    <p class="about">
+      These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.    
+    </p>
+  </div>
+  <div class="addCart">
+   <div> 
+    <h2>$<span class="discount">125</span>.00</h2>
+    <p>
+      <span>50%</span>
+    </p>
+   </div>
+   <div>
+    <p class="origPrice">
+      $250.00
+    </p>
+  </div>
+  </div>
+<div class="button-and-increaseItems">
+  <div class="items-No">
+    <span>
+      <img src="images/icon-minus.svg" alt="" onclick="Decrease()" class="decrease-icon">
+    </span>
+    <p class="num">
+      1
+    </p>
+    <span>
+      <img src="images/icon-plus.svg" alt="" onclick="Increase()">
+    </span>
+  </div>
+  <div class="button">
+    <button onclick="addTocart()">
+      <span >
+        <img src="images/icon-cart.svg" alt="cart-icon" >
+      </span>
+      <p>
+        Add to cart
+      </p>
+    </button>
+  </div>
+</div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oladimeji Richard</a>.
+  </div>
+</article>
+ </main>
+ <section class="lightroom">
+  <div class="closeLightroom-icon">
+    <span>
+      <img src="images/icon-close.svg" alt="">
+    </span>
+  </div>
+  <div class="lightroom-bigContainer">
+  <div class="lightroom-container">
+    <div class="lightroom-cards">
+      <div class="lightroom-card ">
+        <img src="images/image-product-1.jpg" alt="" class="shoeImage">
+      </div>
+      <div class="lightroom-card">
+        <img src="images/image-product-2.jpg" alt=""class="shoeImage">
+      </div>
+      <div class="lightroom-card">
+        <img src="images/image-product-3.jpg" alt=""class="shoeImage">
+      </div>
+      <div class="lightroom-card">
+        <img src="images/image-product-4.jpg" alt=""class="shoeImage">
+      </div>
+    </div>
+   <div class="lightroom-controls">
+    <div class="lightroom-icon-previous lightroom-control">
+      <img src="images/icon-previous.svg" alt="">
+    </div>
+    <div class="lightroom-icon-next lightroom-control">
+      <img src="images/icon-next.svg" alt="">
+    </div>
+   </div> 
+  </div>
+  <div class="thumbnails">
+    <div class="thumbnail lightroom-one">
+      <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail-image ">
+    </div>
+    <div class="thumbnail lightroom-two">
+      <img src="images/image-product-2-thumbnail.jpg" alt=""  class="thumbnail-image ">
+    </div>
+    <div class="thumbnail lightroom-three">
+      <img src="images/image-product-3-thumbnail.jpg" alt=""  class="thumbnail-image ">
+    </div>
+    <div class="thumbnail lightroom-four">
+      <img src="images/image-product-4-thumbnail.jpg" alt=""  class="thumbnail-image ">
+    </div>
+  </div>
+  </div>
+ </section>
+</body>
+<script src="script.js"></script>
+</html>
