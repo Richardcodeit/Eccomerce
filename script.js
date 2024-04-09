@@ -250,7 +250,7 @@ function updateUi(cartss){
   cartss.forEach((items , index) => {
   const  list  = `<li id ${index}>
                            ${div(items.ShoeImage , items.ShoeName , items.discountRound , items.totalPriceRound , index)}
-0                           </li>`
+                          </li>`
 ulCart.insertAdjacentHTML("afterbegin" , list)
                           })
 }
@@ -261,4 +261,5 @@ function delet(event){
    delete cartss[id]
   updateUi(cartss)
   itmensNoincrement--;
+  
 }
