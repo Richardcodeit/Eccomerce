@@ -218,7 +218,8 @@ const menuIcon = document.querySelector(".menu-icon"),
         const info = {id : id , ShoeImage , ShoeName , discountRound , totalPriceRound}
         cartss.push(info)
         updateUi(cartss)
-        itmensNoincrement++;
+        itmensNoincrement++
+        itemsNo.innerHTML = itmensNoincrement
       }
       let list;
       
@@ -254,12 +255,12 @@ function updateUi(cartss){
 ulCart.insertAdjacentHTML("afterbegin" , list)
                           })
 }
-
+//This is the function to delete the array by the id
 function delet(event){
   ulCart.innerHTML = ""
   const id = Number(event.target.id)
    delete cartss[id]
   updateUi(cartss)
   itmensNoincrement--;
-  
+  itemsNo.innerHTML = itmensNoincrement
 }
