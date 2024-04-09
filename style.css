@@ -303,3 +303,22 @@ header > div {
  z-index: -1;
 }
 }
+
+
+
+
+
+
+/* const list = {id, shoeImage, showName, discountRound, totalPriceRound}
+
+carts.push(list)
+
+carts = cartss.map(function(items , i){
+return `<li id = ${i}  class = "list-items" onClick="delete(${id})"> ${items} </li>` 
+}) 
+
+itmensNoincrement++;
+itemsNo.innerHTML = itmensNoincrement
+
+// Calling the updateUl and pasing 
+updateUl() */

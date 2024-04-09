@@ -212,64 +212,51 @@ const menuIcon = document.querySelector(".menu-icon"),
         const totalPrice = pValue * Discount
         const totalPriceRound = Number(totalPrice).toFixed(2)
 
-        const list = 
-                  ` 
-                    <div> 
-                           <div class="shoe-image">
-                               <img src=${ShoeImage} class ="cart-thumbnail">
-                            </div>
-                            <div class="name-and-price">
-                               <p class="name-of-shoe">${ShoeName}</p>
-                               <div class="price">
-                                  <p class="origal-price" >$${discountRound}</p> 
-                                  <p class="total-price">${totalPriceRound}</p>
-                               </div>
-                             </div>
-                           <div class="delete-icon">
-                                 <img src="images/icon-delete.svg" alt="delete-icon" class="delete-icon">
-                            </div>
+
+        const id = Math.floor(Math.random() * 5) + 1
+
+        const info = {id : id , ShoeImage , ShoeName , discountRound , totalPriceRound}
+        cartss.push(info)
+        updateUi(cartss)
+      }
+      let list;
+      
+      function div(ShoeImage , ShoeName , discountRound , totalPriceRound , id){
+    return ` 
+               <div> 
+                      <div class="shoe-image">
+                          <img src=${ShoeImage} class ="cart-thumbnail">
+                       </div>
+                       <div class="name-and-price">
+                          <p class="name-of-shoe">${ShoeName}</p>
+                          <div class="price">
+                          <p class="origal-price" >$${discountRound}</p> 
+                             <p class="total-price">${totalPriceRound}</p>
                           </div>
-                         <div class="button"><button class = "icon">Checkout</button>
-                     </div> `
+                        </div>
+                      <div class="delete-icon" id=${id}" onclick='delet(event)'>
+                            <img src="images/icon-delete.svg" alt="delete-icon" class="delete-icon" id=${id}>
+                       </div>
+                     </div>
+                    <div class="button"><button class = "icon">Checkout</button>
+                </div> `
+  }
 
-        cartss.push(list)
-        carts = cartss.map(function(items , i){
-        return `<li id = ${i}  class = "list-items"> ${items} </li>` 
-        }) 
-       
-        ulCart.addEventListener("click", (event) => delet(carts));
-        itmensNoincrement++;
-        itemsNo.innerHTML = itmensNoincrement
-        
-        // Calling the updateUl and pasing 
-        UpdateUl(carts)
-      }
 
-      //  Function for setting the cartList items to ulCart element
-      ulCart.innerHTML = "Nothing here..."
-      function UpdateUl(cartList){
-        ulCart.innerHTML = ""
-        ulCart.insertAdjacentHTML("afterbegin" , cartList)
-      }
-  // To test for delete 
-//  ulCart.addEventListener("click" , delet)
 
-function delet(lap){
- 
-    const target = event.target
-    // TO trigger the list itmes
-   if(target.classList.contains('delete-icon')){
-    const listItem = document.querySelectorAll('.list-items')
-    for( i = 0 ; i < listItem.length ; i++){
-      const targ = Number(listItem[i].id)
-      console.log(targ)
-    }
-   }
- }
-      
-      
-      
-      
-      
-      
-      
+function updateUi(cartss){
+  ulCart.innerHTML =  ""
+  cartss.forEach((items , index) => {
+  const  list  = `<li id ${index}>
+                           ${div(items.ShoeImage , items.ShoeName , items.discountRound , items.totalPriceRound , index)}
+0                           </li>`
+ulCart.insertAdjacentHTML("afterbegin" , list)
+                          })
+}
+
+function delet(event){
+  ulCart.innerHTML = ""
+  const id = Number(event.target.id)
+   delete cartss[id]
+  updateUi(cartss)
+}
