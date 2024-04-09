@@ -218,6 +218,7 @@ const menuIcon = document.querySelector(".menu-icon"),
         const info = {id : id , ShoeImage , ShoeName , discountRound , totalPriceRound}
         cartss.push(info)
         updateUi(cartss)
+        itmensNoincrement++;
       }
       let list;
       
@@ -259,4 +260,5 @@ function delet(event){
   const id = Number(event.target.id)
    delete cartss[id]
   updateUi(cartss)
+  itmensNoincrement--;
 }
